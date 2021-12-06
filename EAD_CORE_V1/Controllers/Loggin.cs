@@ -77,7 +77,6 @@ namespace EAD_CORE_V1.Controllers
         public async Task<ActionResult<dynamic>> Logout()
         {
             HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            // HttpContext.Session.Clear();
             var a = User.Identity.Name;
             return true;
         }

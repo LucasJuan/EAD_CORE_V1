@@ -36,7 +36,6 @@ namespace EAD_CORE_V1
            
             services.AddControllers();
             services.AddTransient<TokenService, TokenService>();
-            services.AddTransient<AuthService, AuthService>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "EAD_CORE_V1", Version = "v1" });
