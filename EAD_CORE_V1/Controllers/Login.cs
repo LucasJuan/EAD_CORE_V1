@@ -52,14 +52,9 @@ namespace EAD_CORE_V1.Controllers
                     authProp
                     );
                 user.senha = "";
+                user.key = token;
 
-                return new
-                {
-                    result = true,
-                    user = user,
-                    token = token,
-                    message = "Seja bem vindo " + user.nome
-                };
+                return user;
             }
             else
             {
