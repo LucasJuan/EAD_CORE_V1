@@ -1,4 +1,4 @@
-﻿using Common;
+﻿using EAD_CORE.Common.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EAD_CORE.Domain.Entities
 {
-    public class User : CommonServices
+    public class User : CommonEntities
     {
 
         public string senha { get; set; }
@@ -23,7 +23,7 @@ namespace EAD_CORE.Domain.Entities
         public string cargo { get; set; }
         public string EADAdm { get; set; }
         public string chave { get; set; }
-        public List<Address> address { get; set; }
+        public IList<Address> address { get; set; }
 
     }
 

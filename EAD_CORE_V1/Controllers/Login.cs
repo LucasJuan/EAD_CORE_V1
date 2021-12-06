@@ -10,17 +10,17 @@ using System.Threading.Tasks;
 
 namespace EAD_CORE_V1.Controllers
 {
-    public class Loggin : Controller
+    public class Login : Controller
     {
         private readonly TokenService _executaServicoAuth;
-        public Loggin(TokenService executaServicoAuth)
+        public Login(TokenService executaServicoAuth)
         {
             _executaServicoAuth = executaServicoAuth;
         }
 
         [HttpPost]
-        [Route("Home/loggin")]
-        public async Task<ActionResult<dynamic>> Authenticate([FromBody] Access model)
+        [Route("Home/login")]
+        public async Task<ActionResult<object>> Authenticate([FromBody] Access model)
         {
             model.email = "teste";
             //var user = DAL.Home.validaUsuario(model);
@@ -74,10 +74,9 @@ namespace EAD_CORE_V1.Controllers
 
         [HttpPost]
         [Route("Home/logout")]
-        public async Task<ActionResult<dynamic>> Logout()
+        public async Task<ActionResult<bool>> Logout()
         {
             HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            var a = User.Identity.Name;
             return true;
         }
     }

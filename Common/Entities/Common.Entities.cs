@@ -1,9 +1,9 @@
 ﻿using System;
 
 
-namespace Common
+namespace EAD_CORE.Common.Entities
 {
-    public  class CommonServices 
+    public  class CommonEntities 
     {
 
         public int codigo { get; set; }

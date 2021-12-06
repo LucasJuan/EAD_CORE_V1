@@ -1,5 +1,5 @@
-﻿using Common;
-using EAD_CORE.Common;
+﻿using EAD_CORE.Common;
+using EAD_CORE.Common.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace EAD_CORE.Domain.Entities
 {
-    class Matter: CommonServices
+    class Matter: CommonEntities
     {
         public string descricao { get; set; }
         public string nomeMateria { get; set; }

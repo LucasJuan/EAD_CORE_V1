@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EAD_CORE.Common
+namespace EAD_CORE.Common.Entities
 {
     public class FileInputBaseCommon
     {
