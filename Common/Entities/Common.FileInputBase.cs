@@ -9,8 +9,8 @@ namespace EAD_CORE.Common.Entities
 {
     public class FileInputBaseCommon
     {
-        public IFormFile image { get; set; }
-        public IFormFile video { get; set; }
-        public IFormFile attatch { get; set; }
+        public IFormFile Image { get; set; }
+        public IFormFile Video { get; set; }
+        public IFormFile Attatch { get; set; }
     }
 }

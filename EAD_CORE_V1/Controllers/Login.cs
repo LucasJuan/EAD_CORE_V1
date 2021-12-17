@@ -46,7 +46,7 @@ namespace EAD_CORE_V1.Controllers
                     ExpiresUtc = DateTimeOffset.UtcNow.AddMinutes(25),
                     IsPersistent = true
                 };
-                HttpContext.SignInAsync(
+               await HttpContext.SignInAsync(
                     CookieAuthenticationDefaults.AuthenticationScheme,
                     new ClaimsPrincipal(claim),
                     authProp
@@ -71,7 +71,7 @@ namespace EAD_CORE_V1.Controllers
         [Route("Home/logout")]
         public async Task<ActionResult<bool>> Logout()
         {
-            HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+           await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return true;
         }
     }
