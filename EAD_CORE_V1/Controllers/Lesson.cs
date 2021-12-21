@@ -14,7 +14,7 @@ namespace EAD_CORE_V1.Controllers
         {
             _context = context;
         }
-        [HttpPost]
+        [HttpGet]
         [Route("Home/Get")]
         public async Task<ActionResult<Object>> GetAtributes()
         {

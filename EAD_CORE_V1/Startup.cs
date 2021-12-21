@@ -18,6 +18,7 @@ using Microsoft.IdentityModel.Tokens;
 using EAD_CORE_V1.Services;
 using EAD_CORE.Infra.Context;
 using EAD_CORE_V1.Controllers;
+using EAD_CORE_V1.Dependencies;
 
 namespace EAD_CORE_V1
 {
@@ -37,9 +38,9 @@ namespace EAD_CORE_V1
             services.AddMvc();
            
             services.AddControllers();
-            services.AddTransient<TokenService, TokenService>();
-            services.AddTransient<Lesson, Lesson>();
-            services.AddScoped<PreventivaContext>();
+            //add DependencyInjection
+            services.AddServicesDependencies();
+           
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "EAD_CORE_V1", Version = "v1" });
