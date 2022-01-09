@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 
 namespace EAD_CORE_V1.Controllers
 {
+    [ApiController]
+    [Route("api")]
     public class Login : Controller
     {
         private readonly TokenService _executaServicoAuth;
